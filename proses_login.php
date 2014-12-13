@@ -20,7 +20,7 @@
 	}
 	else {
 			session_start();
-			$_SESSION['nama_user'] = $data_login['user_name'];
+			$_SESSION['user_name'] = $data_login['user_name'];
 			
 			header("Location:index.php");
 			?>

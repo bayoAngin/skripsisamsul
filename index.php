@@ -1,8 +1,7 @@
 <?php 
 	include "koneksi.php";
-	session_start();
-	$_SESSION['nama_user'] = 'rahmad';
-	$user_name = $_SESSION['nama_user'];
+	include "cek_login.php";
+	$user_name = $_SESSION['user_name'];
 	
 	$tampil_wilayah = "SELECT * FROM `wilayah` WHERE `user_name` = '$user_name'";
 	$tampil_query = mysql_query($tampil_wilayah);	

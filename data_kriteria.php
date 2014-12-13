@@ -27,23 +27,23 @@
 			<h4>Tentukan Kriteria yang Anda Gunakan!</h4>
 				<div class="row">
 					<div class="col-sm-4" style="text-align: left">
-					<input type="checkbox" name="C1" value="Suhu tahunan rata-rata"> Suhu tahunan rata-rata<br>
-					<input type="checkbox" name="C2" value="Curah hujan tahunan rata-rata"> Curah hujan tahunan rata-rata<br>
-					<input type="checkbox" name="C3" value="Jumlah bulan kering"> Jumlah bulan kering<br>
+					<input type="checkbox" name="C1" value="1"> Suhu tahunan rata-rata<br>
+					<input type="checkbox" name="C2" value="1"> Curah hujan tahunan rata-rata<br>
+					<input type="checkbox" name="C3" value="1"> Jumlah bulan kering<br>
 					</div>
 					
 					<div class="col-sm-4" style="text-align: left">
-					<input type="checkbox" name="C4" value="Fraksi kasar"> Fraksi kasar<br>
-					<input type="checkbox" name="C5" value="Kedalaman tanah"> Kedalaman tanah<br>
-					<input type="checkbox" name="C6" value="Ketebalan gambut"> Ketebalan gambut<br>
-					<input type="checkbox" name="C7" value="Salinitas"> Salinitas<br>
+					<input type="checkbox" name="C4" value="1"> Fraksi kasar<br>
+					<input type="checkbox" name="C5" value="1"> Kedalaman tanah<br>
+					<input type="checkbox" name="C6" value="1"> Ketebalan gambut<br>
+					<input type="checkbox" name="C7" value="1"> Salinitas<br>
 					</div>
 				
 					<div class="col-sm-4" style="text-align: left">
-					<input type="checkbox" name="C8" value="Kedalaman sulfidik"> Kedalaman sulfidik<br>
-					<input type="checkbox" name="C9" value="Lereng"> Lereng<br>
-					<input type="checkbox" name="C10" value="Batuan permukaan"> Batuan permukaan<br>
-					<input type="checkbox" name="C11" value="Singkapan batuan"> Sinngkapan batuan<br><br>
+					<input type="checkbox" name="C8" value="1"> Kedalaman sulfidik<br>
+					<input type="checkbox" name="C9" value="1"> Lereng<br>
+					<input type="checkbox" name="C10" value="1"> Batuan permukaan<br>
+					<input type="checkbox" name="C11" value="1"> Singkapan batuan<br><br>
 					</div>
 				</div><br>
 	
