@@ -43,7 +43,7 @@
 					<input type="checkbox" name="C8" value="Kedalaman sulfidik"> Kedalaman sulfidik<br>
 					<input type="checkbox" name="C9" value="Lereng"> Lereng<br>
 					<input type="checkbox" name="C10" value="Batuan permukaan"> Batuan permukaan<br>
-					<input type="checkbox" name="C11" value="Sinngkapan batuan"> Sinngkapan batuan<br><br>
+					<input type="checkbox" name="C11" value="Singkapan batuan"> Sinngkapan batuan<br><br>
 					</div>
 				</div><br>
 	

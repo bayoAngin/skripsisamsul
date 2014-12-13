@@ -29,21 +29,21 @@
 				<div class="panel panel-primary">
 					<div class="panel-body">
 					<h4>Weighted Product</h4>
-					<a role="button" class="btn btn-success" href="hitung_wp.php">Hitung</a>	
+					<a role="button" class="btn btn-success btn-lg" href="wp.php">Pilih</a>	
 					</div>
 				</div>
 			
 				<div class="panel panel-primary">	
 					<div class="panel-body">
 					<h4>SMART</h4>
-					<a role="button" class="btn btn-success" href="hitung_smart.php">Hitung</a>
+					<a role="button" class="btn btn-success btn-lg" href="smart.php">Pilih</a>
 					</div>
 				</div>
 					
 				<div class="panel panel-primary">
 					<div class="panel-body">
 					<h4>Weighted Product dan SMART</h4>
-					<a role="button" class="btn btn-success" href="hitung_wp_smart.php">Hitung</a>	
+					<a role="button" class="btn btn-success btn-lg" href="wp_smart.php">Pilih</a>	
 					</div>	
 				</div>
 			</div>
