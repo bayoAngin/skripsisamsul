@@ -1,6 +1,6 @@
 <?php 
 	include "koneksi.php";
-	session_start();
+	include "cek_login.php";
 	
 	$user_name = $_SESSION['user_name'];
 	if(isset($_GET['id'])){

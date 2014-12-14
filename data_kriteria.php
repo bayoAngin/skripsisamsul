@@ -1,61 +1,96 @@
+<?php 
+	include "koneksi.php";
+	include "cek_login.php";
+	
+	$user_name = $_SESSION['user_name'];
+	$id_wilayah = $_SESSION['id_wilayah'];
+
+	$tampil_kriteria = "SELECT * FROM `wil_kriteria` WHERE `id_wilayah` = ".$id_wilayah;
+	$tampil_query = mysql_query($tampil_kriteria);	
+	
+?>
+
 <html>
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/datatables/jquery.dataTables.css">
+
+<script type="text/javascript" src="jquery/jquery.js"></script>
+<script type="text/javascript" src="bootstrap/datatables/jquery.dataTables.js"></script>
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Data Kriteria</title>
+
+<script>
+$(document).ready( function () {
+    $('#tabel_kriteria').DataTable({
+    	"bAutoWidth": false,
+    	"aoColumns": [
+    	          	{"sWidth":"10%"},
+    	          	{"sWidth":"50%"},
+    	          	{"sWidth":"20%"},
+    	          	{"sWidth":"20%"}]
+        });
+    
+} );
+</script>
+
+<title>Data Kriteria | <?php echo $user_name; ?></title>
 </head>
 <body>
 
-<form role="form" action="proses_simpan_data_kriteria.php" method="POST">
 	<div class="row" style="margin-top: 50pt">
 		<div class="col-sm-offset-3 col-sm-6 panel panel-primary" style="text-align: center">
-		<div class="panel-heading">
-			<h1>Data Kriteria</h1>
-		</div><br>
-		
-		<div class="row">
-			<div class="col-sm-6">
-				<a role="button" class="btn btn-default" href="index.php">Halaman Depan</a>
-			</div>
-				
-			<div class="col-sm-6">
-				<a role="button" class="btn btn-danger" href="logout.php">Keluar</a>
-			</div>
-		</div>
-		
-		<div class="panel-body">
-			<h4>Tentukan Kriteria yang Anda Gunakan! yaaa wakwaw</h4>
-				<div class="row">
-					<div class="col-sm-4" style="text-align: left">
-					<input type="checkbox" name="C1" value="1"> Suhu tahunan rata-rata<br>
-					<input type="checkbox" name="C2" value="1"> Curah hujan tahunan rata-rata<br>
-					<input type="checkbox" name="C3" value="1"> Jumlah bulan kering<br>
-					</div>
-					
-					<div class="col-sm-4" style="text-align: left">
-					<input type="checkbox" name="C4" value="1"> Fraksi kasar<br>
-					<input type="checkbox" name="C5" value="1"> Kedalaman tanah<br>
-					<input type="checkbox" name="C6" value="1"> Ketebalan gambut<br>
-					<input type="checkbox" name="C7" value="1"> Salinitas<br>
-					</div>
-				
-					<div class="col-sm-4" style="text-align: left">
-					<input type="checkbox" name="C8" value="1"> Kedalaman sulfidik<br>
-					<input type="checkbox" name="C9" value="1"> Lereng<br>
-					<input type="checkbox" name="C10" value="1"> Batuan permukaan<br>
-					<input type="checkbox" name="C11" value="1"> Singkapan batuan<br><br>
-					</div>
-				</div><br>
+			<div class="panel-heading">
+			<h1>Data Kriteria</h1><br>
+				Wilayah : <?php echo $_SESSION['nama_wilayah']?>
+			</div><br>
 	
-				<div class="row">
-					<div style="text-align: center">
-						<input type="submit" class="btn btn-primary" value="Simpan"></submit>
-						<a role="button" class="btn btn-default" href="data_alternatif.php">Batal</a>
-					</div>
-				</div>	
-		</div>
-		</div>
-	</div>
-</form>
+			<div class="row">
+				<div class="col-sm-6">
+					<a role="button" class="btn btn-default" href="index.php">Halaman Depan</a>
+				</div>
+			
+				<div class="col-sm-6"><a role="button" class="btn btn-danger" href="logout.php">Keluar</a>
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<div class="row" style="margin-top: 10pt">
+					<div class="col-md-offset-1 col-md-10" style="text-align: center">
+						<table border="1" cellpadding="5" cellspacing="5" style="text-align: center" id="tabel_kriteria" class="display">
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>Kriteria</th>
+									<th>Alias</th>
+									<th>Opsi</th>
+								</tr>
+							</thead>
+							<tbody>
+	<?php
+	$nomor = 1;
+	while($tampil_hasil = mysql_fetch_array($tampil_query))
+	{
+		$id_kriteria = $tampil_hasil['id_kriteria'];
+		$query = "SELECT * FROM kriteria WHERE `id_kriteria` = ".$id_kriteria;
+		$result = mysql_query($query);
+		$kriteria = mysql_fetch_array($result);
+		$id_wil_kriteria = $tampil_hasil['id_wil_kriteria'];
+		
+		echo"<tr>
+						<td>".$nomor."</td>
+						<td>".$kriteria['kriteria']."</td>
+						<td>".$kriteria['alias']."</td>
+						<td>
+							<a role=\"button\" class=\"btn btn-danger\" href=\"hapus_kriteria.php?id=$id_wil_kriteria\">Hapus</td>
+						</td>
+					</tr>";
+		$nomor++;
+	}
+	?>
+	</tbody>
+</table>
+</div>
+</div>
+<a role="button" class="btn btn-primary" href="tentukan_kriteria.php?id=$id_wilayah">Tambah Kriteria</td>
 </body>
 </html>
