@@ -24,7 +24,7 @@
 		</div>
 		
 		<div class="panel-body">
-			<h4>Tentukan Kriteria yang Anda Gunakan!</h4>
+			<h4>Tentukan Kriteria yang Anda Gunakan! yaaa wakwaw</h4>
 				<div class="row">
 					<div class="col-sm-4" style="text-align: left">
 					<input type="checkbox" name="C1" value="1"> Suhu tahunan rata-rata<br>
