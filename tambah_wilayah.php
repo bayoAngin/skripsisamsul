@@ -25,13 +25,6 @@
 	
 		<div class="panel-body">
 			<div class="form-group">
-			<label for="user_name" class="col-md-2 control-label">Username</label>
-			<div class="col-md-10">
-			<input type="text" class="form-control" name="user_name">
-			</div>
-			</div>
-			
-			<div class="form-group">
 			<label for="nama_wilayah" class="col-md-2 control-label">Wilayah</label>
 			<div class="col-md-10">
 			<input type="text" class="form-control" name="nama_wilayah">

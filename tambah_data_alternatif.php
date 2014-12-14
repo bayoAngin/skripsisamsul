@@ -1,3 +1,5 @@
+<?php 
+include_once('cek_login.php');?>
 <html>
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
@@ -11,6 +13,10 @@
 		<div class="col-sm-offset-4 col-sm-4 panel panel-primary" style="text-align: center">
 		<div class="panel-heading">	
 			<h1>Tambah Data Alternatif</h1><br>
+			Wilayah: 
+			<?php 
+				echo $_SESSION['nama_wilayah'];
+			?>
 		</div><br>
 		
 		<div class="row">

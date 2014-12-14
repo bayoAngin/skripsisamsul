@@ -74,7 +74,7 @@ $(document).ready( function () {
 						<td>$nama_wilayah</td>
 							<td>
 							<form method=\"POST\" action=\"aksi_wilayah.php?id=$id\"><input type=\"hidden\" value=\"$id\" name=\"id\">
-							<a role=\"button\" class=\"btn btn-success\" href=\"data_alternatif.php\">Pilih</a> <button type=\"submit\" name=\"aksi\" class=\"btn btn-default\" value=\"edit\">Ubah</button> <button type=\"submit\" name=\"aksi\" class=\"btn btn-danger\" value=\"hapus\">Hapus</button></td>
+							<a role=\"button\" class=\"btn btn-success\" href=\"data_alternatif.php?id=".$id."\">Pilih</a> <button type=\"submit\" name=\"aksi\" class=\"btn btn-default\" value=\"edit\">Ubah</button> <button type=\"submit\" name=\"aksi\" class=\"btn btn-danger\" value=\"hapus\">Hapus</button></td>
 							</form>
 							</td>
 					</tr>";

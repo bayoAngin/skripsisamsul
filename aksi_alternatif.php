@@ -1,7 +1,7 @@
 <?php
 
 	include "koneksi.php";
-
+	
 	$aksi = strtolower($_POST['aksi']);
 	$id = $_REQUEST['id'];
 	
@@ -42,15 +42,15 @@
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Edit Data Alternatif</title>
+<title>Ubah Data Alternatif</title>
 </head>
 <body>
 
-<form class="form-horizontal" role="form" action="proses_update_alternatif.php" method="POST">
+<form class="form-horizontal" role="form" action="proses_ubah_alternatif.php" method="POST">
 	<div class="row" style="margin-top: 100pt">
 		<div class="col-sm-offset-4 col-sm-4 panel panel-primary" style="text-align: center">
 		<div class="panel-heading">	
-			<h1>Edit Data Alternatif</h1><br>
+			<h1>Ubah Data Alternatif</h1><br>
 		</div><br>
 		
 		<div class="row">
@@ -93,7 +93,6 @@
 </form>
 </body>
 </html>
-
 
 <?php 
 		}

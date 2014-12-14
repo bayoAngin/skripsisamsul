@@ -2,9 +2,22 @@
 	include "koneksi.php";
 	session_start();
 	
-	$user_name = $_SESSION['nama_user'];
+	$user_name = $_SESSION['user_name'];
+	if(isset($_GET['id'])){
+		$id_wilayah = $_GET['id'];
+		$_SESSION['id_wilayah'] = $id_wilayah;
+	} else {
+		$id_wilayah = $_SESSION['id_wilayah'];
+	}
 	
-	$tampil_alternatif = "SELECT * FROM alternatif";
+	$nama_wilayah = "SELECT * FROM `wilayah` WHERE `id_wilayah` = ".$id_wilayah;
+	$wilayah_query = mysql_query($nama_wilayah);
+	$wilayah = mysql_fetch_array($wilayah_query);
+	$nama_wilayah = $wilayah['nama_wilayah'];
+	
+	$_SESSION['nama_wilayah'] = $nama_wilayah;
+	
+	$tampil_alternatif = "SELECT * FROM `alternatif` WHERE `id_wilayah` = ".$id_wilayah;
 	$tampil_query = mysql_query($tampil_alternatif);	
 ?>
 
@@ -41,6 +54,7 @@ $(document).ready( function () {
 		<div class="col-sm-offset-3 col-sm-6 panel panel-primary" style="text-align: center">
 			<div class="panel-heading">
 				<h1>Data Alternatif</h1><br>
+				Wilayah : <?php echo $_SESSION['nama_wilayah']?>
 			</div><br>
 			
 			<div class="row">
