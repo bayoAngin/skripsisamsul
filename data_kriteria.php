@@ -89,6 +89,7 @@ $(document).ready( function () {
 	?>
 							</tbody>
 						</table>
+						<a role="button" class="btn btn-danger" href="data_alternatif.php">Kembali</a> 
 						<a role="button" class="btn btn-primary" href="tentukan_kriteria.php">Tambah Kriteria</a></td>
 						<a role="button" class="btn btn-primary" href="metode.php">Pilih Metode</a></td>					
 						</div>

@@ -72,9 +72,10 @@ rata-rata<br>
 <br>
 
 <div class="row">
-<div style="text-align: center"><input type="submit"
-	class="btn btn-primary" value="Simpan"></submit> <a role="button"
-	class="btn btn-default" href="data_kriteria.php">Batal</a></div>
+<div style="text-align: center">
+    <a role="button" class="btn btn-danger" href="data_kriteria.php">Kembali</a> 
+    <input type="submit" class="btn btn-primary" value="Simpan"></submit> 
+    <a role="button" class="btn btn-default" href="data_kriteria.php">Batal</a></div>
 </div>
 <br>
 </div>

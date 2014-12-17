@@ -53,6 +53,7 @@
 					</div>	
 				</div>
 			</div>
+			<a role="button" class="btn btn-danger" href="data_kriteria.php">Kembali</a> 
 		</div>
 		</div>
 	</div>
