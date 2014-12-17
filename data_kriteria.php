@@ -41,7 +41,7 @@ $(document).ready( function () {
 		<div class="col-sm-offset-3 col-sm-6 panel panel-primary" style="text-align: center">
 			<div class="panel-heading">
 			<h1>Data Kriteria</h1><br>
-				Wilayah : <?php echo $_SESSION['nama_wilayah']?>
+				Wilayah: <?php echo $_SESSION['nama_wilayah']?>
 			</div><br>
 	
 			<div class="row">
@@ -87,10 +87,14 @@ $(document).ready( function () {
 		$nomor++;
 	}
 	?>
-	</tbody>
-</table>
-</div>
-</div>
-<a role="button" class="btn btn-primary" href="tentukan_kriteria.php?id=$id_wilayah">Tambah Kriteria</td>
+							</tbody>
+						</table>
+						<a role="button" class="btn btn-primary" href="tentukan_kriteria.php">Tambah Kriteria</a></td>
+						<a role="button" class="btn btn-primary" href="metode.php">Pilih Metode</a></td>					
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
 </body>
 </html>

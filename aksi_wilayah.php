@@ -42,7 +42,7 @@
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Ubah Wilayah</title>
+<title>Ubah Wilayah | <?php echo $user_name; ?></title>
 </head>
 <body>
 

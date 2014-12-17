@@ -1,8 +1,14 @@
+<?php
+	include "koneksi.php";
+	include "cek_login.php";
+	$user_name = $_SESSION['user_name'];
+?>
+
 <html>
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Metode</title>
+<title>Metode | <?php echo $user_name; ?></title>
 </head>
 <body>
 	
@@ -28,22 +34,22 @@
 			<div class="row">
 				<div class="panel panel-primary">
 					<div class="panel-body">
-					<h4>Weighted Product</h4>
-					<a role="button" class="btn btn-success btn-lg" href="wp.php">Pilih</a>	
+					<h3><strong>Weighted Product</strong></h3>
+					<a role="button" class="btn btn-success" href="wp.php">Pilih</a>	
 					</div>
 				</div>
 			
 				<div class="panel panel-primary">	
 					<div class="panel-body">
-					<h4>SMART</h4>
-					<a role="button" class="btn btn-success btn-lg" href="smart.php">Pilih</a>
+					<h3><strong>SMART</strong></h3>
+					<a role="button" class="btn btn-success" href="smart.php">Pilih</a>
 					</div>
 				</div>
 					
 				<div class="panel panel-primary">
 					<div class="panel-body">
-					<h4>Weighted Product dan SMART</h4>
-					<a role="button" class="btn btn-success btn-lg" href="wp_smart.php">Pilih</a>	
+					<h3><strong>Bandingkan Metode</strong></h3>
+					<a role="button" class="btn btn-success" href="wp_smart.php">Pilih</a>	
 					</div>	
 				</div>
 			</div>

@@ -1,7 +1,9 @@
 <?php
 
 	include "koneksi.php";
-	
+	include "cek_login.php";
+	$user_name = $_SESSION['user_name'];
+
 	$aksi = strtolower($_POST['aksi']);
 	$id = $_REQUEST['id'];
 	
@@ -42,7 +44,7 @@
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Ubah Data Alternatif</title>
+<title>Ubah Data Alternatif | <?php echo $user_name; ?></title>
 </head>
 <body>
 

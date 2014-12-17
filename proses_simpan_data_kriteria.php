@@ -1,7 +1,8 @@
 <?php
 	include('koneksi.php');
+	include('cek_login.php');
 	
-	$id_wilayah="2";
+	$id_wilayah= $_SESSION['id_wilayah'];
 	
 	if(isset ($_POST["C1"]) || isset ($_POST["C2"]) || isset ($_POST["C3"]) || isset ($_POST["C4"]) || isset ($_POST["C5"]) || isset ($_POST["C6"]) || isset ($_POST["C7"]) || isset ($_POST["C8"]) || isset ($_POST["9"]) || isset ($_POST["C10"]) || isset ($_POST["C11"])){
 		$sql_simpan_data_kriteria = "INSERT INTO `wil_kriteria` (`id_wil_kriteria`, `id_wilayah`, `id_kriteria`) VALUES ";
@@ -9,7 +10,6 @@
 		$before = false;
 
 		if(isset ($_POST["C1"])){
-			echo "tang";
 			$sql_simpan_data_kriteria = $sql_simpan_data_kriteria."(NULL,".$id_wilayah.",1)";
 			$before = true;
 		}

@@ -1,8 +1,14 @@
+<?php
+	include "koneksi.php";
+	include "cek_login.php";
+	$user_name = $_SESSION['user_name'];
+?>
+
 <html>
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Info</title>
+<title>Info | <?php echo $user_name; ?></title>
 </head>
 <body>
 

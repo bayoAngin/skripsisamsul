@@ -54,7 +54,7 @@ $(document).ready( function () {
 		<div class="col-sm-offset-3 col-sm-6 panel panel-primary" style="text-align: center">
 			<div class="panel-heading">
 				<h1>Data Alternatif</h1><br>
-				Wilayah : <?php echo $_SESSION['nama_wilayah']?>
+				Wilayah: <?php echo $_SESSION['nama_wilayah']?>
 			</div><br>
 			
 			<div class="row">

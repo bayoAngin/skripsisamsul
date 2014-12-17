@@ -1,3 +1,9 @@
+<?php
+    include "koneksi.php";
+    include "cek_login.php";
+    $user_name = $_SESSION['user_name'];
+?>
+
 <html>
 <head>
 <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
@@ -7,7 +13,7 @@
 <script type="text/javascript" src="bootstrap/datatables/jquery.dataTables.js"></script>
 
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-<title>Tentukan Kriteria</title>
+<title>Tentukan Kriteria | <?php echo $user_name; ?></title>
 
 <script>
 $(document).ready( function () {
@@ -68,7 +74,7 @@ rata-rata<br>
 <div class="row">
 <div style="text-align: center"><input type="submit"
 	class="btn btn-primary" value="Simpan"></submit> <a role="button"
-	class="btn btn-default" href="data_alternatif.php">Batal</a></div>
+	class="btn btn-default" href="data_kriteria.php">Batal</a></div>
 </div>
 <br>
 </div>
