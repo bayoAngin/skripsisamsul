@@ -121,7 +121,7 @@
 	
 	
 	var _intVal = function ( s ) {
-		var integer = parseInt( s, 10 );
+		var integer = parseInt( s, 11 );
 		return !isNaN(integer) && isFinite(s) ? integer : null;
 	};
 	

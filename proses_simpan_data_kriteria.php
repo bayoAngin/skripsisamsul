@@ -94,7 +94,7 @@
 			?>
 				<script language="javascript">
 					alert("Berhasil! Data Kriteria telah disimpan");
-					document.location.href = "metode.php";
+					document.location.href = "data_kriteria.php";
 				</script>
 			<?php	
 			

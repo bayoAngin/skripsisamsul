@@ -40,12 +40,21 @@ $(document).ready( function () {
 	style="text-align: center">
 <div class="panel-heading">
 <h1>Data Kriteria</h1>
-</div>
-<br>
+</div><br>
+
+<div class="row">
+                <div class="col-sm-6">
+                <a role="button" class="btn btn-default" href="index.php">Halaman Depan</a>
+                </div>
+                
+                <div class="col-sm-6">
+                <a role="button" class="btn btn-danger" href="login2.php">Keluar</a>
+                </div>
+            </div><br>
 
 
+<h4>Tentukan Kriteria yang Anda Gunakan!</h4><br>
 
-<h4>Tentukan Kriteria yang Anda Gunakan!</h4>
 <div class="row">
 <div class="col-sm-4" style="text-align: left"><input type="checkbox"
 	name="C1" value="1"> Suhu tahunan rata-rata<br>
@@ -73,9 +82,9 @@ rata-rata<br>
 
 <div class="row">
 <div style="text-align: center">
-    <a role="button" class="btn btn-danger" href="data_kriteria.php">Kembali</a> 
-    <input type="submit" class="btn btn-primary" value="Simpan"></submit> 
-    <a role="button" class="btn btn-default" href="data_kriteria.php">Batal</a></div>
+    <input type="submit" class="btn btn-primary" value="Simpan"></submit>
+    <a role="button" class="btn btn-default" href="data_kriteria.php">Batal</a>
+</div>
 </div>
 <br>
 </div>

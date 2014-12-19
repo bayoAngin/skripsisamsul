@@ -1,6 +1,7 @@
 <?php 
 	include "koneksi.php";
 	include "cek_login.php";
+	
 	$user_name = $_SESSION['user_name'];
 	
 	$tampil_wilayah = "SELECT * FROM `wilayah` WHERE `user_name` = '$user_name'";
@@ -53,12 +54,12 @@ $(document).ready( function () {
 			<div class="panel-body">
 				<div class="row" style="margin-top: 10pt">
 					<div class="col-sm-12" style="text-align: center">
-						<table border="1" cellpadding="5" cellspacing="5" style="text-align: center" class="display" id="tabel_wilayah">
+						<table border="1" cellpadding="5" cellspacing="5" class="display" id="tabel_wilayah">
 							<thead>
 								<tr>
-									<th>No.</th>
-									<th>Wilayah</th>
-									<th>Opsi</th>
+									<th style="text-align: center;">No.</th>
+									<th style="text-align: center;">Wilayah</th>
+									<th style="text-align: center;">Opsi</th>
 								</tr>
 							</thead>
 							<tbody>						
@@ -70,9 +71,9 @@ $(document).ready( function () {
 		$id = $tampil_hasil['id_wilayah'];
 											
 				echo"<tr>
-						<td>$nomor</td>
+						<td style=\"text-align: center;\">$nomor</td>
 						<td>$nama_wilayah</td>
-							<td>
+							<td style=\"text-align: center;\">
 							<form method=\"POST\" action=\"aksi_wilayah.php?id=$id\"><input type=\"hidden\" value=\"$id\" name=\"id\">
 							<a role=\"button\" class=\"btn btn-success\" href=\"data_alternatif.php?id=".$id."\">Pilih</a> <button type=\"submit\" name=\"aksi\" class=\"btn btn-default\" value=\"edit\">Ubah</button> <button type=\"submit\" name=\"aksi\" class=\"btn btn-danger\" value=\"hapus\">Hapus</button></td>
 							</form>

@@ -56,13 +56,13 @@ $(document).ready( function () {
 			<div class="panel-body">
 				<div class="row" style="margin-top: 10pt">
 					<div class="col-md-offset-1 col-md-10" style="text-align: center">
-						<table border="1" cellpadding="5" cellspacing="5" style="text-align: center" id="tabel_kriteria" class="display">
+						<table border="1" cellpadding="5" cellspacing="5" id="tabel_kriteria" class="display">
 							<thead>
 								<tr>
-									<th>No.</th>
-									<th>Kriteria</th>
-									<th>Alias</th>
-									<th>Opsi</th>
+									<th style="text-align: center;">No.</th>
+									<th style="text-align: center;">Kriteria</th>
+									<th style="text-align: center;">Alias</th>
+									<th style="text-align: center;">Opsi</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -77,10 +77,10 @@ $(document).ready( function () {
 		$id_wil_kriteria = $tampil_hasil['id_wil_kriteria'];
 		
 		echo"<tr>
-						<td>".$nomor."</td>
+						<td style=\"text-align: center;\">".$nomor."</td>
 						<td>".$kriteria['kriteria']."</td>
-						<td>".$kriteria['alias']."</td>
-						<td>
+						<td style=\"text-align: center;\">".$kriteria['alias']."</td>
+						<td style=\"text-align: center;\">
 							<a role=\"button\" class=\"btn btn-danger\" href=\"hapus_kriteria.php?id=$id_wil_kriteria\">Hapus</td>
 						</td>
 					</tr>";
