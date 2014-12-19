@@ -22,6 +22,7 @@
 	<script>
 	$(document).ready( function () {
 	    $('#tabel_bobot_wp').DataTable({
+		"paging" : false,
 	    	"bAutoWidth": false,
 	    	"aoColumns": [
 	    	          	{"sWidth":"10%"},
@@ -72,17 +73,18 @@
 	$nomor = 1;
 	while($tampil_hasil = mysql_fetch_array($tampil_query))
 	{
+		$id_wil_kriteria = $tampil_hasil['id_wil_kriteria'];
 		$id_kriteria = $tampil_hasil['id_kriteria'];
-		$query = "SELECT * FROM kriteria WHERE `id_kriteria` = ".$id_kriteria;
+
+		// Ambil definisi kriteria berdasarkan id_kriteria	
+		$query = "SELECT kriteria FROM kriteria WHERE `id_kriteria` = ".$id_kriteria;
 		$result = mysql_query($query);
 		$kriteria = mysql_fetch_array($result);
-		$bobot = mysql_fetch_array($result);
-		$id_wil_kriteria = $tampil_hasil['id_wil_kriteria'];
 		
 		echo"<tr>
 						<td style=\"text-align: center;\">".$nomor."</td>
 						<td>".$kriteria['kriteria']."</td>
-						<td style=\"text-align: center;\"><input type='text' class='form-control' id='bobot' name='bobot'></td>
+						<td style=\"text-align: center;\"><input type='text' class='form-control' id='bobot' name='bobot$id_wil_kriteria'></td>
 					</tr>";
 		$nomor++;
 	}

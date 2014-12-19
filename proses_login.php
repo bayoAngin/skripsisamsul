@@ -1,12 +1,9 @@
 <?php	
 	include('koneksi.php');
-	
 	$user_name = mysql_real_escape_string(trim($_POST['username']));
 	$password = md5(trim($_POST['password']));
-	
 	$query_cek_user = mysql_query("SELECT * FROM user WHERE user_name = '$user_name' AND password = '$password'")or die(mysql_errno());
 	$deteksi_validitas = mysql_num_rows($query_cek_user);
-	
 	//Menyimpan data dalam array ['username'], ['password'], dst
 	$data_login = mysql_fetch_array($query_cek_user);
 	

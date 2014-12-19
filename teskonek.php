@@ -15,9 +15,9 @@
 		
 		print("Koneksi ke MySQL bisa dilakukan<br>\n");
 		
-		$db_spk_lahan_karet = mysql_select_db("spk_lahan_karet", $id_mysql);
+		$db_spk_lahan_karet = mysql_select_db("karetsamsol", $id_mysql);
 		if (! $db_spk_lahan_karet)
-			die ("Tak dapat mengakses database personalia");
+			die ("Tak dapat mengakses database SPK Lahan Karet");
 			
 		print("Database SPK Lahan Karet bisa diakses<br>\n");
 		
