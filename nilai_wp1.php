@@ -22,10 +22,16 @@
 	$tampil_query = mysql_query($tampil_alternatif);	
 
 
-	$id_kriteria = 0;
+	/*$id_kriteria = 0;
 	
 	$query = "SELECT alias FROM kriteria";
-	$tampil_query2 = mysql_query($query)or die (mysql_error());	
+	$tampil_query2 = mysql_query($query)or die (mysql_error());*/
+
+	$user_name = $_SESSION['user_name'];
+	$id_wilayah = $_SESSION['id_wilayah'];
+	
+	$tampil_wilayah = "SELECT * FROM `wil_kriteria` WHERE `id_wilayah` = '$id_wilayah'";
+	$tampil_query2 = mysql_query($tampil_wilayah);
 
 
 ?>
@@ -42,12 +48,12 @@
 
 	<script>
 	$(document).ready( function () {
-	    $('#tabel_wilayah').DataTable({
+	    $('#tabel_wp').DataTable({
 	    	"bAutoWidth": false,
 	    	"aoColumns": [
-	    	          	{"sWidth":"10%"},
-	    	          	{"sWidth":"50%"},
-	    	          	{"sWidth":"40%"}]
+	    				{"sWidth":"20%"},
+	    	          	{"sWidth":"30%"},
+	    	          	{"sWidth":"50%"}]
 	        });
 	    
 	} );
@@ -79,24 +85,37 @@
 				<div class="row" style="margin-top: 10pt">
 					<div class="col-sm-12" style="text-align: center;">
 						<form action="proses_hitung_wp.php" method="POST">
-							<table border="1" cellpadding="5" cellspacing="5" class="display" id="tabel_wilayah">
+							<table border="1" cellpadding="5" cellspacing="5" class="display" id="tabel_wp">
 							<thead  text-align="center">
 								<tr>
 									<th rowspan="2" style="text-align: center;">Alternatif (No. SPT)</th>
-									<th colspan="11" style="text-align: center;">Kriteria</th>
+									<th colspan="2" style="text-align: center;">Kriteria</th>
 								</tr>
 
 								<tr>
 <?php
-	while($tampil_hasil2 = mysql_fetch_array($tampil_query2))
+	/*while($tampil_hasil2 = mysql_fetch_array($tampil_query2))
 	{
 		$alias = $tampil_hasil2['alias'];
 		echo"<td>$alias</td>";
-	}		
+	}*/		
+
+	while($tampil_hasil2 = mysql_fetch_array($tampil_query2))
+	{
+		$id_wil_kriteria = $tampil_hasil2['id_wil_kriteria'];
+		$id_kriteria = $tampil_hasil2['id_kriteria'];
+
+		// Ambil definisi kriteria berdasarkan id_kriteria	
+		$query = "SELECT alias FROM kriteria WHERE `id_kriteria` = ".$id_kriteria;
+		$result = mysql_query($query);
+		$alias = mysql_fetch_array($result);
+		
+		echo"<td>".$alias['alias']."</td>";
+						
 ?>
 								</tr>
 							</thead>
-
+<?php } ?>
 							<tbody>	
 							<tr>					
 <?php 
