@@ -17,5 +17,5 @@ foreach($_POST as $key => $value){
 ?>
 <script language="javascript">
 	alert("Berhasil! Bobot telah disimpan");
-	document.location.href = "nilai_wp1.php";
+	document.location.href = "nilai_wp.php";
 </script>
