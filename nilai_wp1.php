@@ -51,7 +51,7 @@
 	    $('#tabel_wp').DataTable({
 	    	"bAutoWidth": false,
 	    	"aoColumns": [
-	    				{"sWidth":"20%"},
+				{"sWidth":"20%"},
 	    	          	{"sWidth":"30%"},
 	    	          	{"sWidth":"50%"}]
 	        });
@@ -88,18 +88,12 @@
 							<table border="1" cellpadding="5" cellspacing="5" class="display" id="tabel_wp">
 							<thead  text-align="center">
 								<tr>
-									<th rowspan="2" style="text-align: center;">Alternatif (No. SPT)</th>
-									<th colspan="2" style="text-align: center;">Kriteria</th>
+									<th rowspan="2"  style="text-align: center;">Alternatif (No. SPT)</th>
+									<th colspan="<?php echo(mysql_num_rows($tampil_query2)); ?>" style="text-align: center;">Kriteria </th>
 								</tr>
-
 								<tr>
+				
 <?php
-	/*while($tampil_hasil2 = mysql_fetch_array($tampil_query2))
-	{
-		$alias = $tampil_hasil2['alias'];
-		echo"<td>$alias</td>";
-	}*/		
-
 	while($tampil_hasil2 = mysql_fetch_array($tampil_query2))
 	{
 		$id_wil_kriteria = $tampil_hasil2['id_wil_kriteria'];
@@ -110,21 +104,19 @@
 		$result = mysql_query($query);
 		$alias = mysql_fetch_array($result);
 		
-		echo"<td>".$alias['alias']."</td>";
-						
+		echo"<th>".$alias['alias']."</th>";
+	}
 ?>
 								</tr>
 							</thead>
-<?php } ?>
 							<tbody>	
-							<tr>					
 <?php 
 	$jlh_kriteria = mysql_num_rows($tampil_query2);
 
 	while($tampil_hasil = mysql_fetch_array($tampil_query))
 	{
 		$alternatif = $tampil_hasil['no_spt'];
-		
+		echo "<tr>";		
 		echo"<td style=\"text-align: center;\">$alternatif</td>";
 
 		for($i = 0; $i < $jlh_kriteria; $i++) {
